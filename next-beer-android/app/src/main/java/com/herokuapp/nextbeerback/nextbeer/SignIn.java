@@ -17,6 +17,7 @@ import com.android.volley.toolbox.Volley;
 import org.json.JSONArray;
 
 import static android.R.attr.password;
+import static android.R.attr.visible;
 
 public class SignIn extends AppCompatActivity {
 
@@ -33,14 +34,17 @@ public class SignIn extends AppCompatActivity {
         // Used for creating a new intent if sign in is successful
         final Intent intent = new Intent(this, MainContent.class);
 
-        // Getting user input for sign in
+        // Makes loader visible
+        TextView loader = (TextView) findViewById(R.id.sign_in_loader);
+        loader.setVisibility(View.VISIBLE);
+
+        // Getting user input for sign in (username, password)
         EditText username_input = (EditText)findViewById(R.id.username_input);
         String username = username_input.getText().toString();
-
         EditText password_input = (EditText)findViewById(R.id.password_input);
         String password = password_input.getText().toString();
 
-        // Creating the url for signing in
+        // Creating the url for signing in (username, password)
         String signin_url = "https://nextbeerback.herokuapp.com/api/auth?username=" +
                             username +
                             "&password=" +
@@ -54,16 +58,24 @@ public class SignIn extends AppCompatActivity {
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
+                        // If valid, then sign in and hide alert
+                        TextView alert = (TextView) findViewById(R.id.alert_sign_in);
+                        alert.setVisibility(View.GONE);
                         startActivity(intent);
                     }
                 }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
-
+                // If invalid, then show alert
+                TextView alert = (TextView) findViewById(R.id.alert_sign_in);
+                alert.setVisibility(View.VISIBLE);
             }
         });
         // Add the request to the RequestQueue.
         queue.add(accessRequest);
+
+        // Sets loader invisible
+        loader.setVisibility(View.GONE);
     }
 
     public void signUp(View v) {

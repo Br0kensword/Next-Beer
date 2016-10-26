@@ -9,6 +9,22 @@
     android:background="@drawable/gradient_background">
 
     <TextView
+        android:id="@+id/alert_sign_in"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/red_alert"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:layout_marginBottom="@dimen/activity_vertical_margin"
+        android:text="@string/alert_sign_in"
+        android:textAlignment="center"
+        android:padding="@dimen/activity_horizontal_margin"
+        android:textColor="#fff"
+        android:visibility="invisible"/>
+
+    <TextView
         android:id="@+id/app_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -71,5 +87,16 @@
         android:textSize="15sp"
         android:onClick="signUp"
         android:textColor="@color/colorAccent"/>
+
+    <android.support.design.widget.TextInputEditText
+        android:id="@+id/sign_in_loader"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="Loading..."
+        android:textStyle="bold"
+        android:textSize="30sp"
+        android:textAlignment="center"
+        android:background="@drawable/button_clicked"
+        android:visibility="invisible"/>
 
 </RelativeLayout>
