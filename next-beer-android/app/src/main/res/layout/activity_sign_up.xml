@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_sign_up"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.herokuapp.nextbeerback.nextbeer.SignUp"
+    android:background="@drawable/gradient_background">
+
+    <EditText
+        android:id="@+id/username_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/username"
+        android:layout_above="@+id/email_input"
+        android:background="@drawable/edit_text"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:padding="10dp"
+        android:textColor="@color/colorAccent"/>
+
+    <EditText
+        android:id="@+id/email_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/email"
+        android:layout_above="@id/password_input"
+        android:background="@drawable/edit_text"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:layout_marginBottom="@dimen/activity_vertical_margin"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:padding="10dp"
+        android:textColor="@color/colorAccent"
+        android:inputType="textEmailAddress"/>
+
+    <EditText
+        android:id="@+id/password_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/password"
+        android:background="@drawable/edit_text"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:layout_marginBottom="@dimen/activity_vertical_margin"
+        android:padding="10dp"
+        android:textColor="@color/colorAccent"
+        android:layout_centerVertical="true"
+        android:inputType="textPassword"/>
+
+    <EditText
+        android:id="@+id/password_input_confirm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/password_input"
+        android:hint="@string/confirm_password"
+        android:background="@drawable/edit_text"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:padding="10dp"
+        android:textColor="@color/colorAccent"
+        android:inputType="textPassword"/>
+
+    <Button
+        android:id="@+id/sign_up_next_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/sign_up_next"
+        android:onClick="questionnaire"
+        android:layout_below="@id/password_input_confirm"
+        android:padding="10dp"
+        android:layout_margin="@dimen/activity_horizontal_margin"
+        android:textColor="@color/colorAccent"
+        android:background="@drawable/button"/>
+
+</RelativeLayout>

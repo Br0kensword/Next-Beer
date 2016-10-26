@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Next Beer</string>
+    <string name="sign_in">Sign In</string>
+    <string name="sign_up_next">Next</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="username">Username</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="sign_up_text">Don\'t have an account? Sign Up</string>
+</resources>

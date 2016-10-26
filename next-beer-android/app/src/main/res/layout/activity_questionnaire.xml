@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_questionnaire"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.herokuapp.nextbeerback.nextbeer.Questionnaire"
+    android:background="@drawable/gradient_background">
+
+    <Button
+        android:id="@+id/sign_up_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/sign_up"
+        android:onClick="completeSignUp"
+        android:padding="10dp"
+        android:layout_margin="@dimen/activity_horizontal_margin"
+        android:textColor="@color/colorAccent"
+        android:background="@drawable/button"/>
+
+</ScrollView>
