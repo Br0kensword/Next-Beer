@@ -35,7 +35,7 @@ public class SignIn extends AppCompatActivity {
         final Intent intent = new Intent(this, MainContent.class);
 
         // Makes loader visible
-        TextView loader = (TextView) findViewById(R.id.sign_in_loader);
+        final TextView loader = (TextView) findViewById(R.id.sign_in_loader);
         loader.setVisibility(View.VISIBLE);
 
         // Getting user input for sign in (username, password)
@@ -61,6 +61,10 @@ public class SignIn extends AppCompatActivity {
                         // If valid, then sign in and hide alert
                         TextView alert = (TextView) findViewById(R.id.alert_sign_in);
                         alert.setVisibility(View.GONE);
+
+                        // Sets loader invisible
+                        loader.setVisibility(View.GONE);
+
                         startActivity(intent);
                     }
                 }, new Response.ErrorListener() {
@@ -69,13 +73,13 @@ public class SignIn extends AppCompatActivity {
                 // If invalid, then show alert
                 TextView alert = (TextView) findViewById(R.id.alert_sign_in);
                 alert.setVisibility(View.VISIBLE);
+                
+                // Sets loader invisible
+                loader.setVisibility(View.GONE);
             }
         });
         // Add the request to the RequestQueue.
         queue.add(accessRequest);
-
-        // Sets loader invisible
-        loader.setVisibility(View.GONE);
     }
 
     public void signUp(View v) {

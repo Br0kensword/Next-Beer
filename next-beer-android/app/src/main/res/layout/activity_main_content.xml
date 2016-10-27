@@ -2,10 +2,30 @@
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/activity_main_content"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.herokuapp.nextbeerback.nextbeer.MainContent"
     android:background="@drawable/gradient_background">
+
+
+    <android.support.design.widget.TabLayout
+        android:id="@+id/tabLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        app:tabMode="fixed"
+        app:tabGravity="fill">
+    </android.support.design.widget.TabLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tabLayout"
+        android:layout_centerHorizontal="true">
+    </android.support.v4.view.ViewPager>
 
 </RelativeLayout>
