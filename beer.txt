@@ -1,0 +1,12 @@
+1.	What is your current favorite brand of beer?
+2.	How much are you willing to pay for a beer  
+3.	What style of beer do you prefer the most?
+4.	What alcohol strength (ABV) would you look for? 
+5.	Where do you usually drink the beer?
+6.	What kind of beer do you like the most? 
+7.	What country’s beer would you like the most?
+8.	Which brand of the beer do you like the most?
+9.	Do you want a heavy beer or light beer? 
+10.	Do you like sweet taste or bitter taste?
+11.	Rate the level of bitterness you like for your beer?
+12.	Rate the level of sweetness you like for your beer?
