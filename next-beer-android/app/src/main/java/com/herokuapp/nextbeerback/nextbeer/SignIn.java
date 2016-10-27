@@ -73,7 +73,7 @@ public class SignIn extends AppCompatActivity {
                 // If invalid, then show alert
                 TextView alert = (TextView) findViewById(R.id.alert_sign_in);
                 alert.setVisibility(View.VISIBLE);
-                
+
                 // Sets loader invisible
                 loader.setVisibility(View.GONE);
             }

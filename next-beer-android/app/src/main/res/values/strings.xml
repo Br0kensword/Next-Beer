@@ -1,12 +1,26 @@
 <resources>
     <string name="app_name">Next Beer</string>
+    
     <string name="sign_in">Sign In</string>
     <string name="sign_up_next">Next</string>
     <string name="sign_up">Sign Up</string>
+    
     <string name="username">Username</string>
     <string name="email">Email</string>
     <string name="password">Password</string>
     <string name="confirm_password">Confirm Password</string>
     <string name="sign_up_text">Don\'t have an account? Sign Up</string>
     <string name="alert_sign_in">Invalid username or password. Try Again.</string>
+    
+    <string name="malt_title">Malt</string>
+    <string name="malt_description">Barley is the most common grain used to make beer and it’s the component that most affects the overall characteristics of the beer it makes. Barley is harvested, sprouted and then roasted in a process somewhat similar to roasting coffee beans. Depending on how hot and how long the barley is roasted for can drastically change the kind of flavor and color the barley can impart to the beer. Flavors can range from honey sweet to a dark coffee roast and in some special cases even dark fruity flavors like raisins or plums. Other grains can be added to beer for additional flavor such as wheat, corn, oats, rice and rye.</string>
+    
+    <string name="hops_title">Hops</string>
+    <string name="hops_description">Often the most talked about ingredient of beer. Hops, a cone like flower of a vine that can grow over 30 feet long, that contributes to the bitterness of a beer. There are many different types of hops that have a very diverse range of qualities. Some hops are exceedingly bitter, some very light and fruity, while some are considered spicy or even earthy. Hops are grown all over the world but are most famous from farming regions in Germany, Czech Republic, England, Washington and New Zeeland. </string>
+
+    <string name="water_title">Water</string>
+    <string name="water_description">Crucial for not only life on earth, water is a vital component for making beer. Water acts as a medium for extracting the sugars and bitterness from the malt and hops.  Water is also needed by yeast to convert the sugar from the malt into alcohol during the fermentation process. The mineral content of water can also affect the flavor and mouthfeel of the beer. Hard water can lead to sharper tasting beer with more body, while soft water can lead to a crisp and light beer. </string>
+
+    <string name="yeast_title">Yeast</string>
+    <string name="yeast_description">The little microbe that could. Yeast is an incredibly important organism that is well known for its love of sugar. Yeast eats sugar and turns it into alcohol and CO2. In addition, yeast can have a huge impact on the aroma and flavor of the beer it makes. There are many strains of yeast but they are mainly separated into two types, top fermenting yeast and bottom fermenting yeast.  Top fermenting yeast likes colder temperatures and often is used in the making of lagers and other light beers. Bottom fermenting beers are used in Ales which often have a fuller body and tend to be sweeter and fruiter than Lagers in general.</string>
 </resources>

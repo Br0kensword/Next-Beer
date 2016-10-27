@@ -8,14 +8,63 @@
     tools:context="com.herokuapp.nextbeerback.nextbeer.Questionnaire"
     android:background="@drawable/gradient_background">
 
-    <Button
-        android:id="@+id/sign_up_button"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Glossary"
-        android:padding="10dp"
-        android:layout_margin="@dimen/activity_horizontal_margin"
-        android:textColor="@color/colorAccent"
-        android:background="@drawable/button"/>
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:layout_marginBottom="@dimen/activity_vertical_margin"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/malt_title"
+            android:text="@string/malt_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/malt_description"
+            android:text="@string/malt_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/hops_title"
+            android:text="@string/hops_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/hops_description"
+            android:text="@string/hops_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/water_title"
+            android:text="@string/water_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/water_description"
+            android:text="@string/water_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/yeast_title"
+            android:text="@string/yeast_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/yeast_description"
+            android:text="@string/yeast_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
 
 </ScrollView>
