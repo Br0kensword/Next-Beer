@@ -23,4 +23,15 @@
 
     <string name="yeast_title">Yeast</string>
     <string name="yeast_description">The little microbe that could. Yeast is an incredibly important organism that is well known for its love of sugar. Yeast eats sugar and turns it into alcohol and CO2. In addition, yeast can have a huge impact on the aroma and flavor of the beer it makes. There are many strains of yeast but they are mainly separated into two types, top fermenting yeast and bottom fermenting yeast.  Top fermenting yeast likes colder temperatures and often is used in the making of lagers and other light beers. Bottom fermenting beers are used in Ales which often have a fuller body and tend to be sweeter and fruiter than Lagers in general.</string>
+
+    <string name="question1">Question 1</string>
+    <string name="question2">Question 2</string>
+    <string name="question3">Question 3</string>
+    <string name="question4">Question 4</string>
+    <string name="question5">Question 5</string>
+    <string name="question6">Question 6</string>
+    <string name="question7">Question 7</string>
+    <string name="question8">Question 8</string>
+    <string name="question9">Question 9</string>
+    <string name="question10">Question 10</string>
 </resources>
