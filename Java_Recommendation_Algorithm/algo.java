@@ -12,7 +12,7 @@ class Algo {
         int[][] beerArray = {beer1, beer2, beer3, beer4, beer5};
 
         // Fake user pref
-        int[] userPref = {10, 9, 8, 10, 8, 10, 10, 10, 10, 8};
+        int[] userPref = {1, 9, 8, 9, 8, 10, 1, 10, 10, 8};
 
         // Calls the recommendation algorithm
         // Params(int[][], int[])
