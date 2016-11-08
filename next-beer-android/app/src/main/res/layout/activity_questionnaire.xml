@@ -32,7 +32,8 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:id="@+id/question1"
-                android:layout_weight=".7"/>
+                android:layout_weight=".7"
+                android:max="10"/>
 
             <TextView
                 android:layout_width="0dp"
@@ -57,7 +58,8 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:id="@+id/question2"
-                android:layout_weight=".7"/>
+                android:layout_weight=".7"
+                android:max="10"/>
 
             <TextView
                 android:layout_width="0dp"
@@ -82,7 +84,8 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:id="@+id/question3"
-                android:layout_weight=".7"/>
+                android:layout_weight=".7"
+                android:max="10"/>
 
             <TextView
                 android:layout_width="0dp"
@@ -107,7 +110,8 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:id="@+id/question4"
-                android:layout_weight=".7"/>
+                android:layout_weight=".7"
+                android:max="10"/>
 
             <TextView
                 android:layout_width="0dp"
@@ -132,7 +136,8 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:id="@+id/question5"
-                android:layout_weight=".7"/>
+                android:layout_weight=".7"
+                android:max="10"/>
 
             <TextView
                 android:layout_width="0dp"
@@ -157,7 +162,8 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:id="@+id/question6"
-                android:layout_weight=".7"/>
+                android:layout_weight=".7"
+                android:max="10"/>
 
             <TextView
                 android:layout_width="0dp"
@@ -182,7 +188,8 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:id="@+id/question7"
-                android:layout_weight=".7"/>
+                android:layout_weight=".7"
+                android:max="10"/>
 
             <TextView
                 android:layout_width="0dp"
@@ -207,7 +214,8 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:id="@+id/question8"
-                android:layout_weight=".7"/>
+                android:layout_weight=".7"
+                android:max="10"/>
 
             <TextView
                 android:layout_width="0dp"
@@ -232,7 +240,8 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:id="@+id/question9"
-                android:layout_weight=".7"/>
+                android:layout_weight=".7"
+                android:max="10"/>
 
             <TextView
                 android:layout_width="0dp"
@@ -257,7 +266,8 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:id="@+id/question10"
-                android:layout_weight=".7"/>
+                android:layout_weight=".7"
+                android:max="10"/>
 
             <TextView
                 android:layout_width="0dp"
