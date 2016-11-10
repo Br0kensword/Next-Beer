@@ -212,7 +212,7 @@ public class Questionnaire extends AppCompatActivity {
         question10.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
-                question9Val.setText(String.valueOf(progress));
+                question10Val.setText(String.valueOf(progress));
             }
 
             @Override

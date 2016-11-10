@@ -20,50 +20,78 @@
         <TextView
             android:id="@+id/malt_title"
             android:text="@string/malt_title"
+            android:textColor="#fff"
+            android:textSize="30sp"
+            android:textAlignment="center"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:padding="10sp"/>
 
         <TextView
             android:id="@+id/malt_description"
             android:text="@string/malt_description"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:textColor="#fff"/>
 
         <TextView
             android:id="@+id/hops_title"
             android:text="@string/hops_title"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            android:padding="10sp"
+            android:textAlignment="center"
+            android:textSize="30sp"
+            android:textColor="#fff"
+            android:textStyle="bold"/>
 
         <TextView
             android:id="@+id/hops_description"
             android:text="@string/hops_description"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:textColor="#fff"/>
 
         <TextView
             android:id="@+id/water_title"
             android:text="@string/water_title"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            android:padding="10sp"
+            android:textAlignment="center"
+            android:textSize="30sp"
+            android:textColor="#fff"
+            android:textStyle="bold"/>
 
         <TextView
             android:id="@+id/water_description"
             android:text="@string/water_description"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:textColor="#fff"/>
 
         <TextView
             android:id="@+id/yeast_title"
             android:text="@string/yeast_title"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            android:padding="10sp"
+            android:textAlignment="center"
+            android:textSize="30sp"
+            android:textColor="#fff"
+            android:textStyle="bold"/>
 
         <TextView
             android:id="@+id/yeast_description"
             android:text="@string/yeast_description"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:textColor="#fff"/>
 
     </LinearLayout>
 

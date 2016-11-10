@@ -20,7 +20,19 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/question1"/>
+            android:textColor="#fff"
+            android:text="Customize Your Taste Profile"
+            android:layout_margin="10dp"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textAlignment="center"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/question1"
+            android:textColor="#fff"
+            android:textSize="17sp"/>
 
         <LinearLayout
             android:layout_marginBottom="@dimen/activity_vertical_margin"
@@ -40,13 +52,17 @@
                 android:layout_height="wrap_content"
                 android:layout_weight=".3"
                 android:text="0"
-                android:id="@+id/question1Val"/>
+                android:id="@+id/question1Val"
+                android:textColor="#fff"
+                android:textSize="15sp"/>
         </LinearLayout>
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/question2"/>
+            android:text="@string/question2"
+            android:textColor="#fff"
+            android:textSize="17sp"/>
 
         <LinearLayout
             android:layout_marginBottom="@dimen/activity_vertical_margin"
@@ -66,13 +82,17 @@
                 android:layout_height="wrap_content"
                 android:layout_weight=".3"
                 android:text="0"
-                android:id="@+id/question2Val"/>
+                android:id="@+id/question2Val"
+                android:textColor="#fff"
+                android:textSize="15sp"/>
         </LinearLayout>
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/question3"/>
+            android:text="@string/question3"
+            android:textColor="#fff"
+            android:textSize="17sp"/>
 
         <LinearLayout
             android:layout_marginBottom="@dimen/activity_vertical_margin"
@@ -92,13 +112,17 @@
                 android:layout_height="wrap_content"
                 android:layout_weight=".3"
                 android:text="0"
-                android:id="@+id/question3Val"/>
+                android:id="@+id/question3Val"
+                android:textColor="#fff"
+                android:textSize="15sp"/>
         </LinearLayout>
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/question4"/>
+            android:text="@string/question4"
+            android:textColor="#fff"
+            android:textSize="17sp"/>
 
         <LinearLayout
             android:layout_marginBottom="@dimen/activity_vertical_margin"
@@ -118,13 +142,17 @@
                 android:layout_height="wrap_content"
                 android:layout_weight=".3"
                 android:text="0"
-                android:id="@+id/question4Val"/>
+                android:id="@+id/question4Val"
+                android:textColor="#fff"
+                android:textSize="15sp"/>
         </LinearLayout>
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/question5"/>
+            android:text="@string/question5"
+            android:textColor="#fff"
+            android:textSize="17sp"/>
 
         <LinearLayout
             android:layout_marginBottom="@dimen/activity_vertical_margin"
@@ -144,13 +172,17 @@
                 android:layout_height="wrap_content"
                 android:layout_weight=".3"
                 android:text="0"
-                android:id="@+id/question5Val"/>
+                android:id="@+id/question5Val"
+                android:textColor="#fff"
+                android:textSize="15sp"/>
         </LinearLayout>
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/question6"/>
+            android:text="@string/question6"
+            android:textColor="#fff"
+            android:textSize="17sp"/>
 
         <LinearLayout
             android:layout_marginBottom="@dimen/activity_vertical_margin"
@@ -170,13 +202,17 @@
                 android:layout_height="wrap_content"
                 android:layout_weight=".3"
                 android:text="0"
-                android:id="@+id/question6Val"/>
+                android:id="@+id/question6Val"
+                android:textColor="#fff"
+                android:textSize="17sp"/>
         </LinearLayout>
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/question7"/>
+            android:text="@string/question7"
+            android:textColor="#fff"
+            android:textSize="17sp"/>
 
         <LinearLayout
             android:layout_marginBottom="@dimen/activity_vertical_margin"
@@ -196,13 +232,17 @@
                 android:layout_height="wrap_content"
                 android:layout_weight=".3"
                 android:text="0"
-                android:id="@+id/question7Val"/>
+                android:id="@+id/question7Val"
+                android:textColor="#fff"
+                android:textSize="15sp"/>
         </LinearLayout>
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/question8"/>
+            android:text="@string/question8"
+            android:textColor="#fff"
+            android:textSize="17sp"/>
 
         <LinearLayout
             android:layout_marginBottom="@dimen/activity_vertical_margin"
@@ -222,13 +262,17 @@
                 android:layout_height="wrap_content"
                 android:layout_weight=".3"
                 android:text="0"
-                android:id="@+id/question8Val"/>
+                android:id="@+id/question8Val"
+                android:textColor="#fff"
+                android:textSize="15sp"/>
         </LinearLayout>
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/question9"/>
+            android:text="@string/question9"
+            android:textColor="#fff"
+            android:textSize="17sp"/>
 
         <LinearLayout
             android:layout_marginBottom="@dimen/activity_vertical_margin"
@@ -248,13 +292,17 @@
                 android:layout_height="wrap_content"
                 android:layout_weight=".3"
                 android:text="0"
-                android:id="@+id/question9Val"/>
+                android:id="@+id/question9Val"
+                android:textColor="#fff"
+                android:textSize="15sp"/>
         </LinearLayout>
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/question10"/>
+            android:text="@string/question10"
+            android:textColor="#fff"
+            android:textSize="17sp"/>
 
         <LinearLayout
             android:layout_marginBottom="@dimen/activity_vertical_margin"
@@ -274,7 +322,9 @@
                 android:layout_height="wrap_content"
                 android:layout_weight=".3"
                 android:text="0"
-                android:id="@+id/question10Val"/>
+                android:id="@+id/question10Val"
+                android:textColor="#fff"
+                android:textSize="15sp"/>
         </LinearLayout>
 
         <Button

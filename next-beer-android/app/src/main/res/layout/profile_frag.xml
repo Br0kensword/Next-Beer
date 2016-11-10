@@ -9,13 +9,14 @@
     android:background="@drawable/gradient_background">
 
     <Button
-        android:id="@+id/sign_up_button"
+        android:id="@+id/log_out_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Profile"
+        android:text="Log Out"
         android:padding="10dp"
         android:layout_margin="@dimen/activity_horizontal_margin"
         android:textColor="@color/colorAccent"
+        android:onClick="logOu"
         android:background="@drawable/button"/>
 
 </ScrollView>
