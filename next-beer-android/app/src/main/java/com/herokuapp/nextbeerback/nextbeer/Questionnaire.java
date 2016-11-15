@@ -6,6 +6,20 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.SeekBar;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.JsonObjectRequest;
+import com.android.volley.toolbox.Volley;
+
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import static com.herokuapp.nextbeerback.nextbeer.R.string.email;
+import static com.herokuapp.nextbeerback.nextbeer.R.string.username;
 
 public class Questionnaire extends AppCompatActivity {
 
@@ -226,6 +240,39 @@ public class Questionnaire extends AppCompatActivity {
     }
 
     public void completeSignUp(View v) {
+        RequestQueue queue = Volley.newRequestQueue(Questionnaire.this);
+
+        JSONObject userJsonObj = new JSONObject();
+
+        try {
+            userJsonObj.put("malty", question1Val.getText().toString());
+            userJsonObj.put("bitter", question2Val.getText().toString());
+            userJsonObj.put("hoppy", question3Val.getText().toString());
+            userJsonObj.put("roasty", question4Val.getText().toString());
+
+            Toast.makeText(Questionnaire.this, userJsonObj.toString(), Toast.LENGTH_LONG).show();
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+
+        // Creating the url for signing in (username, password)
+
+        JsonObjectRequest createAccount = new JsonObjectRequest(Request.Method.POST, SignIn.signin_url, userJsonObj,
+                new Response.Listener<JSONObject>() {
+                    @Override
+                    public void onResponse(JSONObject response) {
+
+                    }
+                }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+
+            }
+        });
+
+        // Add the request to the RequestQueue.
+        queue.add(createAccount);
+
         Intent intent = new Intent(this, MainContent.class);
         startActivity(intent);
     }

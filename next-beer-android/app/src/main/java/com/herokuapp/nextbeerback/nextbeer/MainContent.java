@@ -1,6 +1,7 @@
 package com.herokuapp.nextbeerback.nextbeer;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -8,6 +9,7 @@ import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 
 public class MainContent extends AppCompatActivity {
 
@@ -43,7 +45,6 @@ public class MainContent extends AppCompatActivity {
         });
     }
 
-
     private class CustomAdapter extends FragmentPagerAdapter {
 
         private String fragments [] = {"Profile","History", "Glossary", "QR Reader"};
@@ -77,5 +78,15 @@ public class MainContent extends AppCompatActivity {
         public CharSequence getPageTitle(int position) {
             return fragments[position];
         }
+    }
+
+    public void logOut(View v) {
+        Intent intent = new Intent(this, SignIn.class);
+        startActivity(intent);
+    }
+
+    public void changePref(View v) {
+        Intent intent = new Intent(this, Questionnaire.class);
+        startActivity(intent);
     }
 }
