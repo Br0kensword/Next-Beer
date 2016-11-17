@@ -31,6 +31,7 @@ public class SignIn extends AppCompatActivity {
     public static String username;
     public static String password;
     public static String ACCESS_TOKEN;
+    public static String taste_url_no_access = "https://nextbeerback.herokuapp.com/api/user/taste";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -73,7 +74,14 @@ public class SignIn extends AppCompatActivity {
                         // Sets loader invisible
                         loader.setVisibility(View.GONE);
 
-                        Toast.makeText(getApplicationContext(), response.toString(), Toast.LENGTH_LONG).show();
+                        //Toast.makeText(getApplicationContext(), response.toString(), Toast.LENGTH_LONG).show();
+                        try {
+                            JSONObject getResponse = new JSONObject(response);
+                            ACCESS_TOKEN = getResponse.getString("access_token");
+                            //Toast.makeText(getApplicationContext(), ACCESS_TOKEN, Toast.LENGTH_LONG).show();
+                        } catch (JSONException e) {
+
+                        }
 
                         startActivity(intent);
                     }
