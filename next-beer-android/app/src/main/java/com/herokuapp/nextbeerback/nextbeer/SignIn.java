@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
@@ -15,14 +16,22 @@ import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 
 import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import static android.R.attr.password;
 import static android.R.attr.visible;
+import static com.herokuapp.nextbeerback.nextbeer.R.string.username;
 
 public class SignIn extends AppCompatActivity {
 
     // API URL
     final String url = "https://nextbeerback.herokuapp.com/api/";
+    public static String signin_url;
+    public static String username;
+    public static String password;
+    public static String ACCESS_TOKEN;
+    public static String taste_url_no_access = "https://nextbeerback.herokuapp.com/api/user/taste";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,12 +49,12 @@ public class SignIn extends AppCompatActivity {
 
         // Getting user input for sign in (username, password)
         EditText username_input = (EditText)findViewById(R.id.username_input);
-        String username = username_input.getText().toString();
+        username = username_input.getText().toString();
         EditText password_input = (EditText)findViewById(R.id.password_input);
-        String password = password_input.getText().toString();
+        password = password_input.getText().toString();
 
         // Creating the url for signing in (username, password)
-        String signin_url = "https://nextbeerback.herokuapp.com/api/auth?username=" +
+        signin_url = "https://nextbeerback.herokuapp.com/api/auth?username=" +
                             username +
                             "&password=" +
                             password;
@@ -64,6 +73,15 @@ public class SignIn extends AppCompatActivity {
 
                         // Sets loader invisible
                         loader.setVisibility(View.GONE);
+
+                        //Toast.makeText(getApplicationContext(), response.toString(), Toast.LENGTH_LONG).show();
+                        try {
+                            JSONObject getResponse = new JSONObject(response);
+                            ACCESS_TOKEN = getResponse.getString("access_token");
+                            //Toast.makeText(getApplicationContext(), ACCESS_TOKEN, Toast.LENGTH_LONG).show();
+                        } catch (JSONException e) {
+
+                        }
 
                         startActivity(intent);
                     }

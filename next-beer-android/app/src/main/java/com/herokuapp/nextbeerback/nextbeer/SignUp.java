@@ -30,8 +30,8 @@ public class SignUp extends AppCompatActivity {
     }
 
     public void questionnaire(View v) {
-        TextView username = (TextView) findViewById(R.id.username_input);
-        TextView password = (TextView) findViewById(R.id.password_input);
+        final TextView username = (TextView) findViewById(R.id.username_input);
+        final TextView password = (TextView) findViewById(R.id.password_input);
         TextView password_confirm = (TextView) findViewById(R.id.password_input_confirm);
         TextView email = (TextView) findViewById(email_input);
 
@@ -53,11 +53,17 @@ public class SignUp extends AppCompatActivity {
         // Creating the url for signing in (username, password)
         String signup_url = "https://nextbeerback.herokuapp.com/api/user";
 
+        SignIn.username = username.getText().toString();
+        SignIn.password = password.getText().toString();
+        SignIn.signin_url = "https://nextbeerback.herokuapp.com/api/auth?username=" +
+                SignIn.username +
+                "&password=" +
+                SignIn.password;
+
         JsonObjectRequest createAccount = new JsonObjectRequest(Request.Method.POST, signup_url, userJsonObj,
                 new Response.Listener<JSONObject>() {
                     @Override
                     public void onResponse(JSONObject response) {
-
                     }
                 }, new Response.ErrorListener() {
             @Override

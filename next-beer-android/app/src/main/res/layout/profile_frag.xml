@@ -8,15 +8,35 @@
     tools:context="com.herokuapp.nextbeerback.nextbeer.Questionnaire"
     android:background="@drawable/gradient_background">
 
-    <Button
-        android:id="@+id/log_out_button"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Log Out"
-        android:padding="10dp"
-        android:layout_margin="@dimen/activity_horizontal_margin"
-        android:textColor="@color/colorAccent"
-        android:onClick="logOu"
-        android:background="@drawable/button"/>
+        android:orientation="vertical">
+
+
+
+        <Button
+            android:id="@+id/change_pref_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Change Preference"
+            android:padding="10dp"
+            android:layout_margin="@dimen/activity_horizontal_margin"
+            android:textColor="@color/colorAccent"
+            android:onClick="changePref"
+            android:background="@drawable/button"/>
+
+        <Button
+            android:id="@+id/log_out_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Log Out"
+            android:padding="10dp"
+            android:layout_margin="@dimen/activity_horizontal_margin"
+            android:textColor="@color/colorAccent"
+            android:onClick="logOut"
+            android:background="@drawable/button"/>
+
+    </LinearLayout>
 
 </ScrollView>
