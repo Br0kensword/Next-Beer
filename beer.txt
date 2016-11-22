@@ -1,12 +1,35 @@
-1.	What is your current favorite brand of beer?
-2.	How much are you willing to pay for a beer  
-3.	What style of beer do you prefer the most?
-4.	What alcohol strength (ABV) would you look for? 
-5.	Where do you usually drink the beer?
-6.	What kind of beer do you like the most? 
-7.	What country’s beer would you like the most?
-8.	Which brand of the beer do you like the most?
-9.	Do you want a heavy beer or light beer? 
-10.	Do you like sweet taste or bitter taste?
-11.	Rate the level of bitterness you like for your beer?
-12.	Rate the level of sweetness you like for your beer?
+1. Do you generally like light or dark beers?	(add weights to beer families)
+2. I enjoy the taste and roast of coffee (roast score)
+3. I enjoy citrus fruit aromas and flavors like lemon, orange or grapefruit (fruity score, bitter, hoppy, beer family)
+4. I enjoy sourness (kombucha, lemonaide) (sour)
+5. I enjoy stone fruit aroma and flavors like apricots, plums, peaches, and cherries (fruit score, beer family)
+6. I enjoy fruit aroma and flavors like bananas, apples and pears (fruit score, beer families)
+7. I enjoy spices like cinnamon, nutmeg, and cloves (spice, beer family)
+8. I enjoy smokey flavors like smoked mozzerella or BBQ (smoke)
+9. I enjoy buttery and bready flavors like biscuits or toast (malty)
+10. I enjoy enjoy a light beer as opposed to heavy beer (beer families)
+11. I enjoy the bitterness of black coffee (roast and bitterness)
+12. I would prefer a beer that is more on the bitter side than the sweet side (bitter, sweet, beer family)
+13. I would prefer a beer that is fruitier and light than a beer that is light and malty. (fruit, sweet, malty, beer family)
+14. I would prefer a beer that has strong flavors and dark over a beer that is more mild and light (roast, malty, sweet, beer families)
+15. Which of these flavor profiles sounds the best to you 1) Boozy and Bold (beer family) 2) Citrusy, Piney and Tropical (hoppy, fruit, bitter, beer family) , 3)light and falvorful (beer family, roast, maltty) 4) Sweet and Rounded (sweet, malty) 5)Roasty and Rich (beer family weights, roasty)
+
+
+
+
+1. I enjoy buttery and bready flavors like biscuits or toast (malty)
+2. I enjoy the bitterness of certain foods and drinks like coffee, dark chocolate, grapefruit or kale (bitter)
+3. I enjoy citrus fruit aromas and flavors like lemon, orange or grapefruit (hoppy)
+4. I enjoy the roasty flavors of coffee, barley or genmai tea (roasty)
+5. I enjoy sweet flavors like honey, milk chocolate or fruit juice (sweet)
+8. I enjoy smokey flavors like smoked mozzerella or BBQ (smoke)
+4. I enjoy sour or acidic tastes such as lemonaide or kombucha (sour)
+5. I enjoy woody flavors like you would get aged whiskey or wine (wood)
+6. I enjoy fruit aroma and flavors like bananas, apples and pears (fruit)
+7. I enjoy spices like cinnamon, nutmeg, and cloves (spice)
+8. Which of these beer profiles sounds the best to you 1) Citrusy, Piney or Tropical (hoppy and fruit) , 2)light and flavorful (bitter, hoppy) 3) Sweet and Rounded (sweet, malty) 4)Roasty and Rich (Roasty sweet) 5) Sour and Fruity (sour, fruit) 6) Bold and Boozy (spice wood)
+
+# should be special and just give a slight boost in score to the various flavor attributes we score from # 1-7
+
+
+
