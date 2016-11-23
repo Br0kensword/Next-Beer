@@ -8,14 +8,24 @@
     tools:context="com.herokuapp.nextbeerback.nextbeer.Questionnaire"
     android:background="@drawable/gradient_background">
 
-    <Button
-        android:id="@+id/sign_up_button"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="History"
-        android:padding="10dp"
-        android:layout_margin="@dimen/activity_horizontal_margin"
-        android:textColor="@color/colorAccent"
-        android:background="@drawable/button"/>
+        android:orientation="vertical">
+        
+        <RelativeLayout
+            android:id="@+id/my_recommended"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_clicked">
+
+            <TextView
+                android:id="@+id/beer_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
 
 </ScrollView>

@@ -35,6 +35,10 @@ public class SignUp extends AppCompatActivity {
         TextView password_confirm = (TextView) findViewById(R.id.password_input_confirm);
         TextView email = (TextView) findViewById(email_input);
 
+        // Makes loader visible
+        final TextView loader = (TextView) findViewById(R.id.sign_in_loader);
+        loader.setVisibility(View.VISIBLE);
+
         RequestQueue queue = Volley.newRequestQueue(SignUp.this);
 
         JSONObject userJsonObj = new JSONObject();
@@ -45,7 +49,7 @@ public class SignUp extends AppCompatActivity {
             userJsonObj.put("password_confirm", password_confirm.getText().toString());
             userJsonObj.put("email", email.getText().toString());
 
-            Toast.makeText(SignUp.this, userJsonObj.toString(), Toast.LENGTH_LONG).show();
+            //Toast.makeText(SignUp.this, userJsonObj.toString(), Toast.LENGTH_LONG).show();
         } catch (JSONException e) {
             e.printStackTrace();
         }
@@ -64,18 +68,22 @@ public class SignUp extends AppCompatActivity {
                 new Response.Listener<JSONObject>() {
                     @Override
                     public void onResponse(JSONObject response) {
+                        Intent intent = new Intent(getApplicationContext(), Questionnaire.class);
+                        startActivity(intent);
                     }
                 }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
+                // If invalid, then show alert
+                TextView alert = (TextView) findViewById(R.id.alert_sign_in);
+                alert.setVisibility(View.VISIBLE);
 
+                // Sets loader invisible
+                loader.setVisibility(View.GONE);
             }
         });
 
         // Add the request to the RequestQueue.
         queue.add(createAccount);
-
-        Intent intent = new Intent(this, Questionnaire.class);
-        startActivity(intent);
     }
 }

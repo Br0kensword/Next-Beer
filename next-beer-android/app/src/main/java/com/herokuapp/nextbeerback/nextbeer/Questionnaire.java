@@ -58,12 +58,15 @@ public class Questionnaire extends AppCompatActivity {
     SeekBar question10;
     TextView question10Val;
 
+    SeekBar question11;
+    TextView question11Val;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_questionnaire);
 
-        Toast.makeText(getApplicationContext(), signin_url, Toast.LENGTH_LONG).show();
+        //Toast.makeText(getApplicationContext(), signin_url, Toast.LENGTH_LONG).show();
 
         question1 = (SeekBar) findViewById(R.id.question1);
         question1Val = (TextView) findViewById(R.id.question1Val);
@@ -245,15 +248,33 @@ public class Questionnaire extends AppCompatActivity {
             }
         });
 
-        //signIn();
+        question11 = (SeekBar) findViewById(R.id.question11);
+        question11Val = (TextView) findViewById(R.id.question11Val);
+
+        question11.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+            @Override
+            public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+                question11Val.setText(String.valueOf(progress));
+            }
+
+            @Override
+            public void onStartTrackingTouch(SeekBar seekBar) {
+            }
+
+            @Override
+            public void onStopTrackingTouch(SeekBar seekBar) {
+            }
+        });
+
+        signIn();
     }
 
     public void signIn() {
         // Instantiate the RequestQueue.
-        RequestQueue queue = Volley.newRequestQueue(this);
+        final RequestQueue queue = Volley.newRequestQueue(this);
 
         // Request a string response from the provided URL.
-        StringRequest accessRequest = new StringRequest(Request.Method.GET, signin_url,
+        final StringRequest accessRequest = new StringRequest(Request.Method.GET, signin_url,
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
@@ -261,7 +282,7 @@ public class Questionnaire extends AppCompatActivity {
                         try {
                             JSONObject getResponse = new JSONObject(response);
                             ACCESS_TOKEN = getResponse.getString("access_token");
-                            Toast.makeText(getApplicationContext(), ACCESS_TOKEN, Toast.LENGTH_LONG).show();
+                            //Toast.makeText(getApplicationContext(), ACCESS_TOKEN, Toast.LENGTH_LONG).show();
                             addTaste();
                         } catch (JSONException e) {
 
@@ -279,32 +300,22 @@ public class Questionnaire extends AppCompatActivity {
     public void addTaste() {
         RequestQueue queue = Volley.newRequestQueue(Questionnaire.this);
 
-        JSONObject userJsonObj = new JSONObject();
+        final JSONObject userJsonObj = new JSONObject();
 
         try {
             userJsonObj.put("access_token", SignIn.ACCESS_TOKEN);
-            userJsonObj.put("malty", Float.parseFloat(question1Val.getText().toString()));
-            userJsonObj.put("bitter", Float.parseFloat(question2Val.getText().toString()));
-            userJsonObj.put("hoppy", Float.parseFloat(question3Val.getText().toString()));
-            userJsonObj.put("roasty", Float.parseFloat(question4Val.getText().toString()));
-            userJsonObj.put("sweet", Float.parseFloat(question5Val.getText().toString()));
-            userJsonObj.put("sour", Float.parseFloat(question6Val.getText().toString()));
-            userJsonObj.put("wood", Float.parseFloat(question7Val.getText().toString()));
-            userJsonObj.put("fruit", Float.parseFloat(question8Val.getText().toString()));
-            userJsonObj.put("spice", Float.parseFloat(question9Val.getText().toString()));
+            userJsonObj.put("malty", question1.getProgress());
+            userJsonObj.put("bitter", question2.getProgress());
+            userJsonObj.put("hoppy", question3.getProgress());
+            userJsonObj.put("roasty", question4.getProgress());
+            userJsonObj.put("smoke", question5.getProgress());
+            userJsonObj.put("sour", question6.getProgress());
+            userJsonObj.put("wood", question7.getProgress());
+            userJsonObj.put("fruit", question8.getProgress());
+            userJsonObj.put("spice", question9.getProgress());
+            userJsonObj.put("sweet", question10.getProgress());
 
-//            userJsonObj.put("access_token", "eyJpYXQiOjE0NzkzMzcwMDAsImV4cCI6MTQ3OTM0MDYwMCwiYWxnIjoiSFMyNTYifQ.eyJpZCI6MX0.AaavTfZomEjRXu5-JQQaAgtzHdSxHYcHCYlG3ca-3qg");
-//            userJsonObj.put("malty", 4.2);
-//            userJsonObj.put("bitter", 3.2);
-//            userJsonObj.put("hoppy", 2);
-//            userJsonObj.put("roasty", 2);
-//            userJsonObj.put("sweet", Float.parseFloat(question5Val.getText().toString()));
-//            userJsonObj.put("sour", 3.2);
-//            userJsonObj.put("wood", 6);
-//            userJsonObj.put("fruit", 2.3);
-//            userJsonObj.put("spice", 5);
-
-            Toast.makeText(Questionnaire.this, userJsonObj.toString(), Toast.LENGTH_LONG).show();
+            //Toast.makeText(Questionnaire.this, userJsonObj.toString(), Toast.LENGTH_LONG).show();
             Log.v("JSONOBJECT", userJsonObj.toString());
         } catch (JSONException e) {
             e.printStackTrace();
@@ -316,13 +327,14 @@ public class Questionnaire extends AppCompatActivity {
                 new Response.Listener<JSONObject>() {
                     @Override
                     public void onResponse(JSONObject response) {
-                        Toast.makeText(getApplicationContext(), ACCESS_TOKEN, Toast.LENGTH_LONG).show();
+                        //Toast.makeText(getApplicationContext(), ACCESS_TOKEN, Toast.LENGTH_LONG).show();
+                        //Toast.makeText(getApplicationContext(), userJsonObj.toString(), Toast.LENGTH_LONG).show();
                         Log.v("SUCCESS", ACCESS_TOKEN);
                     }
                 }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
-                Toast.makeText(getApplicationContext(), ACCESS_TOKEN, Toast.LENGTH_LONG).show();
+                //Toast.makeText(getApplicationContext(), ACCESS_TOKEN, Toast.LENGTH_LONG).show();
                 Log.v("FAILED", ACCESS_TOKEN);
 
             }
@@ -334,8 +346,10 @@ public class Questionnaire extends AppCompatActivity {
 
     public void completeSignUp(View v) {
         signIn();
-
-        Intent intent = new Intent(this, MainContent.class);
+        Intent intent = new Intent(Questionnaire.this, MainContent.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        finish();
         startActivity(intent);
     }
 }

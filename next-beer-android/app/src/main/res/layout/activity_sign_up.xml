@@ -8,6 +8,22 @@
     tools:context="com.herokuapp.nextbeerback.nextbeer.SignUp"
     android:background="@drawable/gradient_background">
 
+    <TextView
+        android:id="@+id/alert_sign_in"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/red_alert"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:layout_marginBottom="@dimen/activity_vertical_margin"
+        android:text="@string/alert_sign_up"
+        android:textAlignment="center"
+        android:padding="@dimen/activity_horizontal_margin"
+        android:textColor="#fff"
+        android:visibility="invisible"/>
+
     <EditText
         android:id="@+id/username_input"
         android:layout_width="match_parent"
@@ -73,5 +89,16 @@
         android:layout_margin="@dimen/activity_horizontal_margin"
         android:textColor="@color/colorAccent"
         android:background="@drawable/button"/>
+
+    <android.support.design.widget.TextInputEditText
+        android:id="@+id/sign_in_loader"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="Loading..."
+        android:textStyle="bold"
+        android:textSize="40sp"
+        android:textAlignment="center"
+        android:background="#bbffffff"
+        android:visibility="invisible"/>
 
 </RelativeLayout>

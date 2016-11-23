@@ -2,6 +2,7 @@ package com.herokuapp.nextbeerback.nextbeer;
 
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Color;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -10,6 +11,9 @@ import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.TextView;
+
+import static com.herokuapp.nextbeerback.nextbeer.R.id.tabLayout;
 
 public class MainContent extends AppCompatActivity {
 
@@ -24,7 +28,7 @@ public class MainContent extends AppCompatActivity {
         mViewPager = (ViewPager) findViewById(R.id.viewPager);
         mViewPager.setAdapter(new CustomAdapter(getSupportFragmentManager(),getApplicationContext()));
 
-        mTabLayout = (TabLayout) findViewById(R.id.tabLayout);
+        mTabLayout = (TabLayout) findViewById(tabLayout);
         mTabLayout.setupWithViewPager(mViewPager);
 
         mTabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
@@ -47,7 +51,8 @@ public class MainContent extends AppCompatActivity {
 
     private class CustomAdapter extends FragmentPagerAdapter {
 
-        private String fragments [] = {"Profile","History", "Glossary", "QR Reader"};
+        //private String fragments [] = {"Profile","History", "Glossary", "QR Reader"};
+        private String fragments [] = {"Profile","My Beers", "Glossary"};
 
         public CustomAdapter(FragmentManager supportFragmentManager, Context applicationContext) {
             super(supportFragmentManager);
@@ -62,8 +67,8 @@ public class MainContent extends AppCompatActivity {
                     return new History();
                 case 2:
                     return new Glossary();
-                case 3:
-                    return new QRreader();
+//                case 3:
+//                    return new QRreader();
                 default:
                     return null;
             }

@@ -11,6 +11,8 @@
     <string name="confirm_password">Confirm Password</string>
     <string name="sign_up_text">Don\'t have an account? Sign Up</string>
     <string name="alert_sign_in">Invalid username or password. Try Again.</string>
+
+    <string name="alert_sign_up">Failed to Sign Up. Try Again.</string>
     
     <string name="malt_title">Malt</string>
     <string name="malt_description">Barley is the most common grain used to make beer and it’s the component that most affects the overall characteristics of the beer it makes. Barley is harvested, sprouted and then roasted in a process somewhat similar to roasting coffee beans. Depending on how hot and how long the barley is roasted for can drastically change the kind of flavor and color the barley can impart to the beer. Flavors can range from honey sweet to a dark coffee roast and in some special cases even dark fruity flavors like raisins or plums. Other grains can be added to beer for additional flavor such as wheat, corn, oats, rice and rye.</string>
@@ -33,5 +35,6 @@
     <string name="question7">I enjoy woody flavors like you would get aged whiskey or wine (wood).</string>
     <string name="question8">I enjoy fruit aroma and flavors like bananas, apples and pears (fruit).</string>
     <string name="question9">I enjoy spices like cinnamon, nutmeg, and cloves (spice).</string>
-    <string name="question10">Which of these beer profiles sounds the best to you 1) Citrusy, Piney or Tropical (hoppy and fruit) , 2)light and flavorful (bitter, hoppy) 3) Sweet and Rounded (sweet, malty) 4)Roasty and Rich (Roasty sweet) 5) Sour and Fruity (sour, fruit) 6) Bold and Boozy (spice wood).</string>
+    <string name="question10">I enjoy sweet tasting foods like candy or soda (Sweet).</string>
+    <string name="question11">Which of these beer profiles sounds the best to you 1) Citrusy, Piney or Tropical (hoppy and fruit) , 2)light and flavorful (bitter, hoppy) 3) Sweet and Rounded (sweet, malty) 4)Roasty and Rich (Roasty sweet) 5) Sour and Fruity (sour, fruit) 6) Bold and Boozy (spice wood).</string>
 </resources>

@@ -327,11 +327,42 @@
                 android:textSize="15sp"/>
         </LinearLayout>
 
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/question11"
+            android:textColor="#fff"
+            android:textSize="17sp"/>
+
+        <LinearLayout
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <SeekBar
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/question11"
+                android:layout_weight=".7"
+                android:max="10"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".3"
+                android:text="0"
+                android:id="@+id/question11Val"
+                android:textColor="#fff"
+                android:textSize="15sp"/>
+        </LinearLayout>
+
         <Button
             android:id="@+id/sign_up_button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/sign_up"
+            android:text="Set Preferences"
             android:onClick="completeSignUp"
             android:padding="10dp"
             android:layout_margin="@dimen/activity_horizontal_margin"

@@ -32,6 +32,7 @@ public class SignIn extends AppCompatActivity {
     public static String password;
     public static String ACCESS_TOKEN;
     public static String taste_url_no_access = "https://nextbeerback.herokuapp.com/api/user/taste";
+    public static String beers_url_no_access = "https://nextbeerback.herokuapp.com/api/user/beers";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -102,6 +103,9 @@ public class SignIn extends AppCompatActivity {
 
     public void signUp(View v) {
         Intent intent = new Intent(this, SignUp.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         startActivity(intent);
+
     }
 }
