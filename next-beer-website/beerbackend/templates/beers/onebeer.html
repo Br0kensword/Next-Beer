@@ -1,0 +1,107 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class="col-lg-12 text-center">
+    <H1>{{beer.beer_name}}</H1>
+    <h3>Family: {{ beer.get_family() }}</h3>
+    <div class="row">
+        <span class="col-xs-2">Color: {{ truncatenum(beer.color) }}</span>
+        <div class="col-xs-1" style="height: 20px; width: 20px;
+                background-color: {{ get_color(beer.color) }}; color:{{get_color(beer
+        .color) }}"></div>
+        <span class="col-xs-3">ABV: {{ truncatenum(beer.abv) }}%</span>
+    </div>
+        <div class="row ">
+            {% if rating %}
+            <span class="col-xs-4">Rated On: {{ rating.created_at }}</span>
+            <div class="col-xs-4">User Rating: {{ rating.rating }}</div>
+            {% endif %}
+            {% if form %}
+                <div class="col-xs-4">
+                    <form id="ratingForm" class="form form-rating" method="POST" action="" roler="form">
+                        <input type="hidden" name="csrf_token" value="{{ csrf_token() }}"/>
+                        <div class="form-group">
+                            {{form.rating.label}}
+                            {{form.rating(placeholder="Rate Beer", class_="form-control")}}
+                        </div>
+                        <p><input class="btn btn-default btn-submit" type="submit" value="RateBeer"></p>
+                    </form>
+                </div>
+            {% endif %}
+        </div>
+
+    </div>
+
+
+    <div id="chart"></div>
+    <canvas id="myChart"></canvas>
+    <a href="{{ url_for('beer.all')}}">Back to All Beers</a>
+{% endblock %}
+
+{% block js %}
+    <script type="text/javascript">
+        var ctx = $("#myChart");
+        var myChart = new Chart(ctx, {
+            type: 'radar',
+            data: {
+                labels: ["Sour", "Malty", "Hoppy", "Woody", "Bitter",
+                    "Roasty", "Spice", "Sweet", "Fruit", "Smoke"],
+                datasets: [{
+                    label: 'Beer Taste Profile',
+
+                    data: [
+                        {{ beer.sour }},
+                        {{ beer.malty }},
+                        {{ beer.hoppy }},
+                        {{ beer.wood }},
+                        {{ beer.bitter }},
+                        {{ beer.roasty }},
+                        {{ beer.spice }},
+                        {{ beer.sweet }},
+                        {{ beer.fruit }},
+                        {{ beer.smoke }},
+                        ],
+
+                    backgroundColor: "rgba(96,38,25, 0.8)",
+                    borderColor: "rgba(96,38,25, 0.8)",
+                    borderWidth: 1
+                }
+                    {% if user_profile %}
+
+                        ,{
+                        label: "User Taste Profile",
+                        backgroundColor: "rgba(240, 95, 64, 1)",
+                        borderColor: "rgba(179,181,198,1)",
+                        pointBackgroundColor: "rgba(179,181,198,1)",
+                        pointBorderColor: "#fff",
+                        pointHoverBackgroundColor: "#fff",
+                        pointHoverBorderColor: "rgba(179,181,198,1)",
+                        data: [
+                            {{ user_profile.sour }},
+                            {{ user_profile.malty }},
+                            {{ user_profile.hoppy }},
+                            {{ user_profile.wood }},
+                            {{ user_profile.bitter }},
+                            {{ user_profile.roasty }},
+                            {{ user_profile.spice }},
+                            {{ user_profile.sweet }},
+                            {{ user_profile.fruit }},
+                            {{ user_profile.smoke }}
+                        ]
+                    }
+                    {% endif %}
+
+                ]
+            },
+            options: {
+                scale: {
+                    ticks:{
+                        beginAtZero: true,
+                        minimum: 0,
+                        max: 10
+                    }
+                }
+            }
+
+        });
+    </script>
+{% endblock %}

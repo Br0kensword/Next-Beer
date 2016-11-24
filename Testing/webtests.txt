@@ -1,0 +1,19 @@
+(Ethan Seither): All tests for the next beer website are in the
+next-beer-website/tests directory. The majority of these are unit tests which
+ensure the functionality of particular services we call and rely on in both the
+API (mobile app) and the weebsite, which has much of the same functionality as
+the mobile app, but does not implement it in the same way. 
+
+The main equivalence classes that we tests are the various states that a user
+can be in, as well as the various states of a beer. Most of the functionality
+of our app relies on the interplay between a user and the beers in our
+database, so we need to ensure that we have a consistent behavior regardless of
+possible differences between the two. There are certain edge cases, like our
+reccomendation algorithm performing correctly on a user who has not created a
+taste profile yet, as this is a large part of our recommendation system.
+
+Further, we need to handle the edge case that a user has not rated any beers,
+or has rated all the beers in the database, we try to ensure that we do not
+ever recommend a beer the user has tried and rated in the past, but there are
+certain scenarios where this is the only valid option, so we needed to ensure
+that this behavior works correctly.

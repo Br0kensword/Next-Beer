@@ -1,0 +1,54 @@
+{% extends "layout.html" %}
+{% block content %}
+    <div class="container-narrow">
+        <h1>Taste Questionnaire</h1>
+        <br/>
+        <form id="qstForm" class="form form-beer" method="POST" action="" role="form">
+            <input type="hidden" name="csrf_token" value="{{ csrf_token() }}"/>
+            <div class="form-group">
+                {{form.bitter.label}}
+                {{form.bitter(placeholder="Bitter", class_="form-control")}}
+            </div>
+            <div class="form-group">
+                {{form.fruit.label}}
+                {{form.fruit(placeholder="Fruit", class_="form-control")}}
+            </div>
+            <div class="form-group">
+                {{form.hoppy.label}}
+                {{form.hoppy(placeholder="Hoppy", class_="form-control")}}
+            </div>
+            <div class="form-group">
+                {{form.malty.label}}
+                {{form.malty(placeholder="Malty", class_="form-control")}}
+            </div>
+            <div class="form-group">
+                {{form.roasty.label}}
+                {{form.roasty(placeholder="Roasty", class_="form-control")}}
+            </div>
+            <div class="form-group">
+                {{form.smoke.label}}
+                {{form.smoke(placeholder="Smoke", class_="form-control")}}
+            </div>
+            <div class="form-group">
+                {{form.sour.label}}
+                {{form.sour(placeholder="Sour", class_="form-control")}}
+            </div>
+            <div class="form-group">
+                {{form.spice.label}}
+                {{form.spice(placeholder="Spice", class_="form-control")}}
+            </div>
+            <div class="form-group">
+                {{form.sweet.label}}
+                {{form.sweet(placeholder="Sweet", class_="form-control")}}
+            </div>
+            <div class="form-group">
+                {{form.wood.label}}
+                {{form.wood(placeholder="Wood", class_="form-control")}}
+            </div>
+            <p><input class="btn btn-default btn-submit" type="submit" value="Update"></p>
+            <input type="button" value="Back" onclick="window.history.back()" />
+
+        </form>
+        <p>All *ess fields should be decimals from 0 to 10</p>
+    </div>
+{% endblock %}

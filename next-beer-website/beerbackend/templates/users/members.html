@@ -1,0 +1,77 @@
+
+{% extends "layout.html" %}
+{% block content %}
+    <h1>Welcome, {{ user.username }}</h1>
+    <h3>You can view your beer preferences here, or <a href="{{ url_for('user.questions') }}">Modify Taste
+    Profile</a></h3>
+    <div id="chart"></div>
+    <canvas id="myChart"></canvas>
+    <div>
+        <table class="table">
+            <thead>
+            <tr>
+                <th>Beer</th>
+                <th>Rating</th>
+                <th>Time</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for rating in ratings %}
+                <tr>
+                    <td><a href="{{ url_for('beer.all')+str(rating.beer_id) }}">
+                        {{rating.beer.beer_name}}</a></td>
+                    <td>{{ rating.rating }}</td>
+                    <td>{{ rating.created_at }}</td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+{% endblock %}
+
+{% block js %}
+<script type="text/javascript">
+        var ctx = $("#myChart");
+        var myChart = new Chart(ctx, {
+            type: 'radar',
+            data: {
+                labels: ["Sour", "Malty", "Hoppy", "Woody", "Bitter", "Color",
+                "Roasty", "Spice", "Sweet", "Fruit", "Smoke"],
+                datasets: [{
+                    label: 'Taste Preference',
+
+                    data: [
+                        {{ profile['sour'] }},
+                        {{ profile['malty'] }},
+                        {{ profile['hoppy'] }},
+                        {{ profile['wood'] }},
+                        {{ profile['bitter'] }},
+                        {{ profile['roasty'] }},
+                        {{ profile['spice'] }},
+                        {{ profile['sweet'] }},
+                        {{ profile['fruit'] }},
+                        {{ profile['smoke'] }},
+                        ],
+                    borderColor: "rgba(179,181,198,1)",
+                    pointBackgroundColor: "rgba(179,181,198,1)",
+                    pointBorderColor: "#fff",
+                    pointHoverBackgroundColor: "#fff",
+                    pointHoverBorderColor: "rgba(179,181,198,1)",
+                    backgroundColor: "rgba(240, 95, 64, 1)",
+                    borderColor: "rgba(179,181,198,1)",
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scale: {
+                    ticks:{
+                        beginAtZero: true,
+                        minimum: 0,
+                        max: 10
+                    }
+                }
+            }
+
+        });
+</script>
+{% endblock %}

@@ -1,0 +1,40 @@
+{% extends "layout.html" %}
+{% block content %}
+    <a href="/beers/add">Add beers</a>
+    <table class="table table-striped">
+        <tr>
+            <th>Name</th>
+            <th>ABV</th>
+            <th>Bitterness</th>
+            <th>Color</th>
+            <th>Fruit</th>
+            <th>Hoppy</th>
+            <th>Malty</th>
+            <th>Roasty</th>
+            <th>Smoke</th>
+            <th>Sour</th>
+            <th>Spice</th>
+            <th>Sweet</th>
+            <th>Wood</th>
+            <th>Family</th>
+        </tr>
+    {% for beer in beers %}
+        <tr>
+            <td><a href="{{ url_for('beer.getbeer', beer_id=beer.id)}}">{{beer.beer_name}}</a></td>
+            <td>{{ truncatenum(beer.abv) }}</td>
+            <td>{{ truncatenum(beer.bitter) }}</td>
+            <td>{{ truncatenum(beer.color) }}</td>
+            <td>{{ truncatenum(beer.fruit) }}</td>
+            <td>{{ truncatenum(beer.hoppy) }}</td>
+            <td>{{ truncatenum(beer.malty) }}</td>
+            <td>{{ truncatenum(beer.roasty) }}</td>
+            <td>{{ truncatenum(beer.smoke) }}</td>
+            <td>{{ truncatenum(beer.sour) }}</td>
+            <td>{{ truncatenum(beer.spice) }}</td>
+            <td>{{ truncatenum(beer.sweet)}}</td>
+            <td>{{ truncatenum(beer.wood) }}</td>
+            <td>{{ beer.get_family() }}</td>
+        </tr>
+    {% endfor %}
+    </table>
+{% endblock %}

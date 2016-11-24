@@ -1,12 +1,12 @@
 {
-  "name": "next-beer",
-  "title": "next-beer",
-  "version": "0.1",
-  "homepage": "https://github.com/Br0kensword/Next-Beer",
-  "author": "Justin",
-  "license": {
-    "type": "None",
+  "name": "beerbackend",
+  "version": "1.0.0",
+  "description": "=============================== next_beer_backend ===============================",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
   },
+  "dependencies": {},
   "devDependencies": {
     "bootstrap": "^3.3.7",
     "browser-sync": "^2.13.0",
@@ -21,8 +21,17 @@
     "magnific-popup": "^1.1.0",
     "scrollreveal": "^3.1.4"
   },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
   "repository": {
     "type": "git",
-    "url": "https://github.com/Br0kensword/Next-Beer"
-  }
+    "url": "git+https://github.com/eternalnoob/beerbackend.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/eternalnoob/beerbackend/issues"
+  },
+  "homepage": "https://github.com/eternalnoob/beerbackend#readme"
 }
